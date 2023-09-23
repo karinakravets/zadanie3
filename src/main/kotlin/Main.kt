@@ -5,11 +5,11 @@ fun main() {
     val a1= numOne.toSet()
     val a2= numTwo.toSet()
 
-    val result = mutatableListOf<int>()
+    val result = mutableListOf<Int>()
 
     for (item in a1){
         if (a2.contains(item)){
-            val numRepeats = minOf(numOne.count { it == item})
+            val numRepeats = minOf(numOne.count { it == item}, numTwo.count {it == item})
             repeat(numRepeats){ result.add(item)}
         }
     }
